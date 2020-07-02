@@ -1,6 +1,6 @@
 {
     "python.linting.pylintArgs": [
-        "--unsafe-load-any-extension=y","--extension-pkg-whitelist=lxml"
+        "--unsafe-load-any-extension=y","--extension-pkg-whitelist=lxml","--errors-only "
     ],
     "python.pythonPath": "/usr/bin/python3"
 }

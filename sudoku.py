@@ -1,22 +1,20 @@
 #sudoku solver
 def solve(board):
-    empty_pos=findempty(board)
+    empty_pos = findempty(board)
     if empty_pos:
-        row,column=empty_pos
-        
+        row, column = empty_pos
     else:
         return True
-    
-    for i in range(1,10):
-        if valid((row,column),board,i):
-            board[row][column]=i
+    for i in range(1, 10):
+        if valid((row, column), board, i):
+            board[row][column] = i
             if solve(board):
                 return True
-            board[row][column]=0
+            board[row][column] = 0
     return False
 
 
-def valid(pos,board,num):
+def valid(pos, board, num):
     #check row
     for i in range(0,len(board[0])):
         if board[pos[0]][i]==num and pos[1]!=i:
